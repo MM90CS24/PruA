@@ -109,7 +109,7 @@ async def start(client: Client, message: Message):
         try: Config_temp[username]
         except: Config_temp[username] = {'host':'','user':'','passw':'','zips':5,'proxy_pv':'','proxy': True,'repo':5,'token':None}
 
-        #await bot.edit_message_text(ID_DB,message_id=2,text=dumps(xd,indent=4))
+        await bot.edit_message_text(ID_DB,message_id=2,text=dumps(xd,indent=4))
         msg = await bot.get_messages(ID_DB,message_ids=ID_DB_data)
         DB_global.update(loads(msg.text))
         #msg_conf = await bot.get_messages(ID_ACC,message_ids=ID_DB_user)
